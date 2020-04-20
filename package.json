@@ -1,0 +1,25 @@
+{
+  "name": "tinyhouse",
+  "version": "0.0.1",
+  "author": "",
+  "license": "ISC",
+  "description": "fullstack react-node-graphql sample app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinniePazz/tinyhouse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VinniePazz/tinyhouse/issues"
+  },
+  "homepage": "https://github.com/VinniePazz/tinyhouse#readme"
+}
