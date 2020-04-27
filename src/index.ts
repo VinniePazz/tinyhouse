@@ -8,7 +8,7 @@ import { typeDefs, resolvers } from './graphql';
 const app = express();
 const port = 9000;
 
-const mount = async (app: Application) => {
+const mount = async (app: Application): Promise<void> => {
   const db = await connectDatabase();
 
   const server = new ApolloServer({
@@ -21,9 +21,6 @@ const mount = async (app: Application) => {
   app.listen(process.env.PORT, () => {
     console.log(`[app] : http://localhost:${port}`);
   });
-
-  const listings = await db.listings.find({}).toArray();
-  console.log(listings);
 };
 
 mount(app);

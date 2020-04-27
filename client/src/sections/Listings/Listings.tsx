@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery, useMutation } from 'react-apollo';
 import { Listings as ListingsData } from './__generated__/Listings';
@@ -35,7 +35,7 @@ interface Props {
   title: string;
 }
 
-export const Listings: FunctionComponent<Props> = ({ title }) => {
+export const Listings: FC<Props> = ({ title }) => {
   const { data, loading, error, refetch } = useQuery<ListingsData>(LISTINGS);
 
   const [
