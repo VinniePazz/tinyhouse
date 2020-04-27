@@ -10,7 +10,8 @@
     "client": "npm start --prefix client",
     "build": "tsc -p ./",
     "seed": "ts-node ./temp/seed.ts",
-    "dev": "concurrently -k \"npm run server\" \"npm run client\""
+    "clear": "ts-node ./temp/clear.ts",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "apollo-server-express": "^2.12.0",

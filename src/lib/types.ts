@@ -1,19 +1,19 @@
 import { ObjectId, Collection } from 'mongodb';
 
-enum ListingType {
+export enum ListingType {
   Apartment = 'APARTMENT',
   House = 'HOUSE',
 }
 
-interface BookingsIndexMonth {
+export interface BookingsIndexMonth {
   [key: string]: boolean;
 }
 
-interface BookingsIndexYear {
+export interface BookingsIndexYear {
   [key: string]: BookingsIndexMonth;
 }
 
-interface BookingsIndex {
+export interface BookingsIndex {
   [key: string]: BookingsIndexYear;
 }
 
