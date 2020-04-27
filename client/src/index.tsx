@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-import { Listings } from './sections';
 import * as serviceWorker from './serviceWorker';
 import './styles/index.css';
+import App from './App';
 
 const client = new ApolloClient({
   uri: '/api',
@@ -13,7 +13,7 @@ const client = new ApolloClient({
 render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <Listings title="TinyHouse Listings" />
+      <App />
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')

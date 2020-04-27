@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Listings = () => {
+export const NotFound = () => {
   return (
     <div>
-      Listings
+      NotFound
     </div>
   )
 }
