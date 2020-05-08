@@ -8,6 +8,15 @@ import App from './App';
 
 const client = new ApolloClient({
   uri: '/api',
+  request: async (operation) => {
+    const token = sessionStorage.getItem('token');
+    console.log('request', token);
+    operation.setContext({
+      headers: {
+        'X-CSRF-TOKEN': token || '',
+      },
+    });
+  },
 });
 
 render(
