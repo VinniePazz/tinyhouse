@@ -159,7 +159,7 @@ export const viewerResolvers: IResolvers = {
       { res }: { res: Response }
     ): Viewer => {
       try {
-        res.clearCookie('viewer', cookieOptions);
+        res.clearCookie('viewer', cookieOptions); // we are passing cookie options in clearing for cross-browsing support
         return { didRequest: true };
       } catch (error) {
         throw new Error(`Failed to log out: ${error}`);
