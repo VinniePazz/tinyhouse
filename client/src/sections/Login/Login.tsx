@@ -52,7 +52,7 @@ export const Login = ({ setViewer }: Props) => {
     }
   }, []);
 
-  const handleAuthorize = async () => {
+  const handleAuthorize = async () => { 
     try {
       const { data } = await client.query<AuthUrlData>({
         query: AUTH_URL,
