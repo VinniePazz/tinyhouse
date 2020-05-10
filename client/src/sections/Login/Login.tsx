@@ -43,6 +43,7 @@ export const Login = ({ setViewer }: Props) => {
   const logInRef = useRef(logIn);
 
   useEffect(() => {
+    // TODO: use URL only when we have "code" query string in url
     const code = new URL(window.location.href).searchParams.get('code');
     if (code) {
       logInRef.current({
